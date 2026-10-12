@@ -1,4 +1,4 @@
 @echo off
-cd java-engine
+cd project\java-engine
 call run.bat %*
-cd ..
+cd ..\..

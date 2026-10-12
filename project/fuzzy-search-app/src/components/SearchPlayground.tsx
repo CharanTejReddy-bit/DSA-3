@@ -191,7 +191,7 @@ export const SearchPlayground: React.FC<SearchPlaygroundProps> = ({
               <span>Query Latency</span>
             </span>
           </div>
-          <div className="text-lg font-bold font-mono text-cyan-300">
+          <div className="text-lg font-bold font-mono text-cyan-300" suppressHydrationWarning>
             {searchTimeMs < 0.1 ? "<0.1 ms" : `${searchTimeMs} ms`}
           </div>
           <div className="text-[10px] text-slate-400 mt-0.5">Sub-millisecond response</div>

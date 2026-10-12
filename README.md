@@ -122,7 +122,7 @@ run-java.bat --server 8080
 
 To recompile:
 ```cmd
-cd java-engine
+cd project\java-engine
 compile.bat
 ```
 
@@ -132,11 +132,11 @@ compile.bat
 Requires **Node.js 18+**.
 
 ```bash
-cd fuzzy-search-app
+cd project\fuzzy-search-app
 npm install
 npm run dev
 ```
-Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+Open **[http://localhost:3000](http://localhost:3000)** in your browser. Or simply double-click `run-web.bat`.
 
 ---
 
@@ -144,28 +144,33 @@ Open **[http://localhost:3000](http://localhost:3000)** in your browser.
 
 ```
 DSA-3/
-├── java-engine/                     # Core Java DSA Engine
-│   ├── src/com/fuzzysearch/
-│   │   ├── core/EditDistance.java   # Wagner-Fischer 2D DP & Backtracking
-│   │   ├── tree/BKTree.java         # Burkhard-Keller Metric Tree & Pruning
-│   │   ├── search/NaiveSearch.java  # O(N * m * n) Linear Baseline
-│   │   ├── data/DictionaryLoader.java # Datasets (CS, English, Medical, Multilingual)
-│   │   ├── benchmark/BenchmarkRunner.java # Benchmark Suite
-│   │   ├── server/FuzzySearchServer.java # Zero-dependency HTTP REST API
-│   │   ├── cli/FuzzySearchCLI.java  # Interactive Terminal CLI
-│   │   ├── gui/FuzzySearchGUI.java  # Java Swing Desktop Application
-│   │   └── Main.java                # Unified Entrypoint
-│   ├── compile.bat                  # Compilation script
-│   ├── run.bat                      # Run script
-│   └── README.md                    # Java Engine Guide
-├── fuzzy-search-app/                # Full-Stack Web Application (Next.js 16)
-│   ├── src/
-│   │   ├── app/                     # Next.js App Router (page.tsx, layout.tsx)
-│   │   ├── components/              # UI Components (Matrix, Tree, Search, Benchmark)
-│   │   └── lib/                     # Algorithms & Datasets
+├── project/                         # Dedicated Project Codebase Directory
+│   ├── java-engine/                 # Core Java DSA Engine
+│   │   ├── src/com/fuzzysearch/
+│   │   │   ├── core/EditDistance.java   # Wagner-Fischer 2D DP & Backtracking
+│   │   │   ├── tree/BKTree.java         # Burkhard-Keller Metric Tree & Pruning
+│   │   │   ├── search/NaiveSearch.java  # O(N * m * n) Linear Baseline
+│   │   │   ├── data/DictionaryLoader.java # Datasets (CS, English, Medical, Multilingual)
+│   │   │   ├── benchmark/BenchmarkRunner.java # Benchmark Suite
+│   │   │   ├── server/FuzzySearchServer.java # Zero-dependency HTTP REST API
+│   │   │   ├── cli/FuzzySearchCLI.java  # Interactive Terminal CLI
+│   │   │   ├── gui/FuzzySearchGUI.java  # Java Swing Desktop Application
+│   │   │   └── Main.java                # Unified Entrypoint
+│   │   ├── compile.bat              # Compilation script
+│   │   ├── run.bat                  # Run script
+│   │   └── README.md                # Java Engine Guide
+│   ├── fuzzy-search-app/            # Full-Stack Web Application (Next.js 16)
+│   │   ├── src/
+│   │   │   ├── app/                 # Next.js App Router (page.tsx, layout.tsx)
+│   │   │   ├── components/          # UI Components (Matrix, Tree, Search, Benchmark)
+│   │   │   └── lib/                 # Algorithms & Datasets
+│   │   ├── package.json
+│   │   └── tsconfig.json
+│   └── README.md                    # Project Codebase Guide
 ├── Fuzzy_Search_Engine_DSA3_Project.pptx # Project Presentation Slides
 ├── fuzzy_search_project_abstract_word_format.md # Official University Abstract
 ├── run-java.bat                     # Root 1-click Java runner
+├── run-web.bat                      # Root 1-click Web runner
 └── README.md                        # Master Documentation
 ```
 
